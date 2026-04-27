@@ -1,0 +1,8 @@
+# BTC/USDT Alert Bot — Dependencies
+# Install: pip install -r requirements.txt
+
+ccxt>=4.4.0
+python-telegram-bot>=21.0
+pandas>=2.2.0
+numpy>=2.0.0
+python-dotenv>=1.0.0
