@@ -1,0 +1,32 @@
+# ── Credentials (NEVER commit these) ──────────
+.env
+
+# ── Python virtual environment ─────────────────
+venv/
+.venv/
+env/
+
+# ── Python cache ───────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Distribution / packaging ───────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+
+# ── Logs ──────────────────────────────────────
+*.log
+
+# ── OS artifacts ──────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────
+.vscode/
+.idea/
+*.swp
