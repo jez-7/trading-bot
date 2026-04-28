@@ -18,7 +18,6 @@ import sys
 import time
 from datetime import datetime, timezone
 from typing import Optional
-
 import ccxt
 import numpy as np
 import pandas as pd
@@ -265,7 +264,7 @@ class AlertEngine:
         """Execute one monitoring cycle."""
         # 1. Fetch current price
         price = self._market.fetch_ticker_price()
-        logger.info("BTC/USDT price: $%,.2f", price)
+        logger.info(f"BTC/USDT price: ${price:,.2f}")
 
         # 2. Fetch 24h of 1-min OHLCV candles
         df = self._market.fetch_ohlcv()
@@ -278,7 +277,7 @@ class AlertEngine:
         poc = compute_poc(df)
         self._last_vwap = vwap
         self._last_poc = poc
-        logger.info("VWAP: $%,.2f | POC: $%,.2f", vwap, poc)
+        logger.info(f"VWAP: ${vwap:,.2f} | POC: ${poc:,.2f}")
 
         # 4. Check proximity & send alerts
         triggered: list[str] = []
